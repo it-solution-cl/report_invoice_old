@@ -118,28 +118,28 @@
                                     <td style="border:none;">
                                         <span ><t t-esc="contador"/></span>
                                     </td>
-                                    <td style="border:none;">
+                                    <td style="border:none; text-align:center">
                                         <span t-field="o.product_id.default_code"></span>
                                     </td>
-                                    <td style="border:none;">
-                                        <span t-field="o.name"></span>
+                                    <td style="border:none">
+                                        <span t-field="o.product_id.name"></span>
                                     </td>
-                                    <td style="border:none;">
+                                    <td style="border:none; text-align:center">
                                         <span t-field="o.currency_id"></span>
                                     </td>
-                                    <td style="border:none;"> 
+                                    <td style="border:none; text-align:center"> 
                                         <span t-field="o.product_uom.name"></span>
                                     </td>
-                                    <td style="border:none;"> 
+                                    <td style="border:none; text-align:center"> 
                                         <span t-field="o.product_qty"></span>
                                     </td>
-                                    <td style="border:none;">
+                                    <td style="border:none; text-align:center">
                                         <span ></span>
                                     </td>
-                                    <td style="border:none;">
+                                    <td style="border:none; text-align:center">
                                         <span t-field="o.price_unit"></span>
                                     </td>
-                                    <td style="border:none;">
+                                    <td style="border:none; text-align:center">
                                         <span t-field="o.price_subtotal"></span>
                                     </td>
                                 </tr>
@@ -151,7 +151,7 @@
                                 <table>
                                     <tr>
                                         <td name="td_subtotal_label"><strong>Neto</strong></td>
-                                        <td  >
+                                        <td >
                                             <span class="m-5" t-field="doc.amount_untaxed"/>
                                         </td>
                                     </tr>
