@@ -160,16 +160,31 @@
                                 </div>
         
                                 <div class="col-3" style="width:250px;margin-left:20px;border-radius: 15px;border: 1px solid black">
+                                    <br/>
                                     <div>
-                                        <br/><br/>
-        
-                                        <span >MONTO Neto <Strong class="m-4" t-field="doc.amount_untaxed"/></span><br/>
-                                        <span >IVA 19% <Strong class="m-4" t-field="doc.amount_tax" /> </span><br/>
+                                        <div class="row justify-content-between" style=" font-size:85%">
+                                            <div class="col-7">
+                                                <span>Dcto.  </span> <br/> <br/>
+                                                <span>MONTO NETO </span><br/>
+                                                <span>MONTO IVA 19% </span><br/>
+                                                <span>MONTO EXENTO </span><br/><br/>
+                                                <strong>MONTO TOTAL</strong>
+                                            </div>
+                                            <div class="col-5" style="text-align: right">
+                                                <span t-esc="doc.total_discount()" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/><br/>
+                                                <strong t-field="doc.amount_untaxed" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/>
+                                                <strong t-field="doc.amount_tax" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/>
+                                                <strong /><br/> <br/>
+                                                <strong  t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                            </div>
+                                        </div>
+                                        <!-- <br/>
+                                        <span >Dcto.  </span> <span class="m-5"  t-esc="doc.total_discount()" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/><br/>
+                                        <span >MONTO Neto <strong class="m-3" style="margin-left:20px" t-field="doc.amount_untaxed" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/></span><br/>
+                                        <span >MONTO IVA 19% <strong class="m-2"  t-field="doc.amount_tax" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/> </span><br/>
                                         <span >MONTO EXENTO </span><br/>
-        
-                                        <Strong >MONTO Total <Strong class="m-4" t-field="doc.amount_total" /></Strong>
-        
-        
+                                
+                                        <strong >MONTO TOTAL <span class="m-2" t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/></strong> -->
                                     </div>
         
                                 </div>
@@ -333,14 +348,14 @@
                             </table>
                         </div>
                     </div><br/>
-                    <div > 
+                    <div> 
                         <div class="row">
                             
                             <div class="col-5" style="width:500px;margin-left:12px;border-radius: 15px;border: 1px solid black"><br/>
-                                <span>NOMBRE :___________________________________</span> 
-                                <span>RUT :________________</span> 
-                                <span>RECINTO:___________________________________________________________</span> <br/>
-                                <span> FECHA:_____________________ FIRMA:_______________________________</span><br/>
+                                <span>NOMBRE :______________________________</span> 
+                                <span>RUT :______________</span> 
+                                <span>RECINTO:___________________________________________________</span> <br/>
+                                <span> FECHA:_________________ FIRMA:____________________________</span><br/>
                                 <span> El acuse de recibo que se declara en este acto, de acuerdo a lo dispuesto
                                         en la letra b) del Art. 4º y la letra c) del Art. 5º de la Ley 19.983, acredita
                                         que la entrega de las mercaderias o servicio(s) prestado(s) ha(n) sido
@@ -362,15 +377,32 @@
                                 </t>
                             </div>
 
-                            <div class="col-3" style="width:250px;margin-left:20px;border-radius: 15px;border: 1px solid black">
+                            <div class="col-3" style="width:250px;margin-left:20px;border-radius: 15px;border: 1px solid black"> 
+                                <br/>
                                 <div>
-                                    <br/>
+                                    <div class="row justify-content-between" style=" font-size:85%">
+                                        <div class="col-7">
+                                            <span>Dcto.  </span> <br/> <br/>
+                                            <span>MONTO NETO </span><br/>
+                                            <span>MONTO IVA 19% </span><br/>
+                                            <span>MONTO EXENTO </span><br/><br/>
+                                            <strong>MONTO TOTAL</strong>
+                                        </div>
+                                        <div class="col-5" style="text-align: right">
+                                            <span t-esc="doc.total_discount()" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/><br/>
+                                            <strong t-field="doc.amount_untaxed" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/>
+                                            <strong t-field="doc.amount_tax" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/>
+                                            <strong /><br/> <br/>
+                                            <strong  t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                        </div>
+                                    </div>
+                                    <!-- <br/>
                                     <span >Dcto.  </span> <span class="m-5"  t-esc="doc.total_discount()" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/><br/><br/>
                                     <span >MONTO Neto <strong class="m-3" style="margin-left:20px" t-field="doc.amount_untaxed" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/></span><br/>
                                     <span >MONTO IVA 19% <strong class="m-2"  t-field="doc.amount_tax" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/> </span><br/>
                                     <span >MONTO EXENTO </span><br/>
                             
-                                    <strong >MONTO TOTAL <span class="m-2" t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/></strong>
+                                    <strong >MONTO TOTAL <span class="m-2" t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/></strong> -->
                                 </div>
                             </div>
                             
