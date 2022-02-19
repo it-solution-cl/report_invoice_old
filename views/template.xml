@@ -128,14 +128,14 @@
                         <strong >IVA </strong><br/>
                         <strong >Total </strong>
                     </div>
-                    <div class="col-4 order-last " align="left">
-                        <span  class ="m-5" t-field="doc.amount_untaxed" /><br/>
+                    <div class="col-2 " align="right">
+                        <span   t-field="doc.amount_untaxed" /><br/>
                         <!-- <span  class ="m-5" t-field="doc.discount"/><br/> -->
-                        <span  class ="m-5" /><br/>
-                        <span  class ="m-5" /><br/>
-                        <span  class ="m-5" t-field="doc.amount_tax" /><br/>
+                        <span  /><br/>
+                        <span   /><br/>
+                        <span   t-field="doc.amount_tax" /><br/>
                         
-                        <span  class ="m-5" t-field="doc.amount_total" /><br/>
+                        <span  t-field="doc.amount_total" /><br/>
                     </div>
                 </div>
             </t>
@@ -197,13 +197,16 @@
                     <thead>
                         <tr>
                             <th style="text-align: center" scope="col">Item</th>
-                            <th style="text-align: center" scope="col">Producto id</th>
+                            <th style="text-align: center" scope="col">Cod. Prod</th>
                             <th style="text-align: center" scope="col">Descripcion</th>
                             <th style="text-align: center" scope="col">Cant.</th>
                             <th style="text-align: center" scope="col">Cant.Pend.</th>
                             <th style="text-align: center" scope="col">Fecha Entrega</th>
                             <th style="text-align: center" scope="col">Precio Unit.</th>
                             <th style="text-align: center" scope="col">Total</th>
+
+
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -258,10 +261,10 @@
                         <Strong> Total :</Strong><br/>
                     </div>
 
-                    <div class="col-4 order-last" align="left">
-                        <span class ="m-5" t-field="doc.amount_untaxed"/><br/>
-                        <span class ="m-5" t-field="doc.amount_tax"/><br/>
-                        <span class ="m-5" t-field="doc.amount_total"/><br/>
+                    <div class="col-2 " align="right">
+                        <span t-field="doc.amount_untaxed"/><br/>
+                        <span  t-field="doc.amount_tax"/><br/>
+                        <span  t-field="doc.amount_total"/><br/>
                     </div>
                 </div>        
                 

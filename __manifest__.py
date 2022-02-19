@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Report Invoice',
-    'version': '14.0',
+    'version': '14.2',
     'description': 'Report Invoice',
     'author': 'Kendatec',
     'website': 'https://kendatec.com/',

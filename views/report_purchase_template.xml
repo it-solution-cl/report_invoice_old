@@ -101,7 +101,7 @@
                         <table class="table table-sm" style="border:none;">
                             <thead>
                                 <th style="text-align: center" scope="col">Item</th>
-                                <th style="text-align: center" scope="col">Producto </th>
+                                <th style="text-align: center" scope="col">Codigo</th>
                                 <th style="text-align: center" scope="col">Descripcion</th>
                                 <th style="text-align: center" scope="col">Moneda</th>
                                 <th style="text-align: center" scope="col">UdM</th>
@@ -151,27 +151,27 @@
                                 <table>
                                     <tr>
                                         <td name="td_subtotal_label"><strong>Neto</strong></td>
-                                        <td >
-                                            <span class="m-5" t-field="doc.amount_untaxed"/>
+                                        <td style="text-align: right" >
+                                            <span  class="m-5" t-field="doc.amount_untaxed"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td name="td_taxes_label"><strong>Descuento</strong></td>
-                                        <td >
-                                            <span class="m-5"/>
+                                        <td style="text-align: right" >
+                                            <span  class="m-5"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td name="td_taxes_label"><strong>IVA</strong></td>
-                                        <td>
+                                        <td style="text-align: right">
                                             <span  class="m-5" t-field="doc.amount_tax"
                                                 t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
                                         </td>
                                     </tr>
                                     <tr >
-                                        <td name="td_amount_total_label"><strong>Total</strong></td>
-                                        <td >
-                                            <span class="m-5" t-field="doc.amount_total"
+                                        <td style="margin-left:50px" name="td_amount_total_label"><strong>Total</strong></td>
+                                        <td style="text-align: right" >
+                                            <span  class="m-5" t-field="doc.amount_total"
                                                 t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
                                         </td>
                                     </tr>

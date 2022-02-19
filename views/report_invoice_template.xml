@@ -18,7 +18,8 @@
                                     <div class="col-7 " style="text-align:center;border: 5px solid red;font-size: 18pt">
                                         <strong > R.U.T <span class= "m-3" t-field="doc.company_id.vat"/></strong><br/><br/>
                                         <strong style="text-align:center;font-family: serif"> BOLETA ELECTRONICA</strong><br/><br/>
-                                        <strong> N° <span class= "m-3" t-field="doc.name"/></strong>
+                                        <t t-set="name_split" t-value="doc.name.split(' ')"/>
+                                        <strong> N° <span class= "m-3" t-esc="name_split[1]"/></strong>
                                     </div>
                                     <div class="col-7" style="color:red;text-align:center">
                                         <span >S.I.I - SANTIAGO NORTE</span>
@@ -144,11 +145,11 @@
         
                                 </div>
         
-                                <div class="col-4" style="width:370px;margin-right:5px;margin-top:0px">
+                                <div class="col-4" style="width:400px;margin-top:0px">
                                     <t t-if="doc.l10n_cl_sii_barcode">
                                         <t t-set="barcode_stamp" t-value="doc._pdf417_barcode(doc.l10n_cl_sii_barcode)"/>
                                         <t t-if="barcode_stamp">
-                                            <img class="img-fluid" t-attf-src="data:image/*;base64,{{barcode_stamp}}"/>
+                                            <img class="img-fluid" t-attf-src="data:image/*;base64,{{barcode_stamp}}" style="width:400px"/>
                                             <p t-att-style="'color: %s;' % doc.company_id.primary_color" class="text-center small">
                                                 Timbre Electrónico SII<br />
                                                 Resolución Nº: <span t-field="doc.company_id.l10n_cl_dte_resolution_number"/>
@@ -158,8 +159,8 @@
                                         </t>
                                     </t>
                                 </div>
-        
-                                <div class="col-3" style="width:250px;margin-left:20px;border-radius: 15px;border: 1px solid black">
+    
+                                <div class="col-3" style="width:260px;border-radius:15px;border: 1px solid black"> 
                                     <br/>
                                     <div>
                                         <div class="row justify-content-between" style=" font-size:85%">
@@ -222,7 +223,8 @@
                                 <div class="col-7 " style="text-align:center;border: 5px solid red;font-size: 18pt">
                                     <strong > R.U.T <span class= "m-3" t-field="doc.company_id.vat"/></strong><br/><br/>
                                     <strong style="text-align:center;font-family: serif"> FACTURA ELECTRONICA</strong><br/><br/>
-                                    <strong> N° <span class= "m-3" t-field="doc.name"/></strong>
+                                    <t t-set="name_split" t-value="doc.name.split(' ')"/>
+                                    <strong> N° <span class= "m-3" t-esc="name_split[1]"/></strong>
                                 </div>
                                 <div class="col-7" style="color:red;text-align:center">
                                     <span >S.I.I - SANTIAGO NORTE</span>
@@ -283,7 +285,9 @@
                                     </div>
                                     <div class="col-3">
                                         <Strong> Folio:</Strong><br />
-                                        <span> 21</span><br />
+                                        <t t-set="name_split" t-value="doc.name.split(' ')"/>
+                                      
+                                        <span> <t t-esc="name_split[1]"/></span><br />
                                     </div>
                                     <div class="col-4">
                                         <Strong> Fecha:</Strong><br />
@@ -362,11 +366,11 @@
                                         recibidos(s).</span><br/>
                             </div>
 
-                            <div class="col-4" style="width:370px;margin-right:5px;margin-top:0px">
+                            <div class="col-4" style="width:400px;margin-top:0px">
                                 <t t-if="doc.l10n_cl_sii_barcode">
                                     <t t-set="barcode_stamp" t-value="doc._pdf417_barcode(doc.l10n_cl_sii_barcode)"/>
                                     <t t-if="barcode_stamp">
-                                        <img class="img-fluid" t-attf-src="data:image/*;base64,{{barcode_stamp}}"/>
+                                        <img class="img-fluid" t-attf-src="data:image/*;base64,{{barcode_stamp}}" style="width:400px"/>
                                         <p t-att-style="'color: %s;' % doc.company_id.primary_color" class="text-center small">
                                             Timbre Electrónico SII<br />
                                             Resolución Nº: <span t-field="doc.company_id.l10n_cl_dte_resolution_number"/>
@@ -377,7 +381,7 @@
                                 </t>
                             </div>
 
-                            <div class="col-3" style="width:250px;margin-left:20px;border-radius: 15px;border: 1px solid black"> 
+                            <div class="col-3" style="width:260px;border-radius:15px;border: 1px solid black"> 
                                 <br/>
                                 <div>
                                     <div class="row justify-content-between" style=" font-size:85%">
